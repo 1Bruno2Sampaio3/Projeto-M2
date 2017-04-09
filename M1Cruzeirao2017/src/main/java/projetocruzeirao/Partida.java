@@ -1,17 +1,40 @@
 package projetocruzeirao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class Partida {
     
     private Local local;
-    private boolean mandante;
-    private Usuario usuarioJuiz;
+    private List<Usuario> usuarioJuiz;
     private Categoria categoria;
-    private List<Times> times;
+    private Time visitante, mandante;
     private String horario;
+    private Partida proxima;
+    
+    public Partida(){
+     usuarioJuiz = new ArrayList<Usuario>();
+    }
 
+    public Time getVisitante() {
+  return visitante;
+ }
+ public void setVisitante(Time visitante) {
+  this.visitante = visitante;
+ }
+ public Time getMandante() {
+  return mandante;
+ }
+ public void setMandante(Time mandante) {
+  this.mandante = mandante;
+ }
+ public Partida getProxima() {
+  return proxima;
+ }
+ public void setProxima(Partida proxima) {
+  this.proxima = proxima;
+ }
     public String getHorario() {
         return horario;
     }
@@ -28,20 +51,12 @@ public class Partida {
         this.local = local;
     }
 
-    public boolean isMandante() {
-        return mandante;
-    }
-
-    public void setMandante(boolean mandante) {
-        this.mandante = mandante;
-    }
-
-    public Usuario getUsuarioJuiz() {
+    public List<Usuario> getUsuarioJuiz() {
         return usuarioJuiz;
     }
 
-    public void setUsuarioJuiz(Usuario usuarioJuiz) {
-        this.usuarioJuiz = usuarioJuiz;
+    public void addUsuarioJuiz(Usuario usuarioJuiz) {
+        this.usuarioJuiz.add(usuarioJuiz);
     }
 
     public Categoria getCategoria() {
@@ -51,14 +66,5 @@ public class Partida {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
-
-    public List<Times> getTimes() {
-        return times;
-    }
-
-    public void addTimes(Times time) {
-        this.times.add(time);
-    }
-    
     
 }

@@ -1,10 +1,15 @@
 package projetocruzeirao;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Membros {
+public class Membro {
     
     private List<Usuario> listaUsuarios;
+    
+    public Membro(){
+     listaUsuarios = new ArrayList<Usuario>();
+    }
 
     public List<Usuario> getListaUsuarios() {
         return listaUsuarios;

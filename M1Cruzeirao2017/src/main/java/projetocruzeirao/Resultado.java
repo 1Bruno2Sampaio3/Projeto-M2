@@ -1,5 +1,6 @@
 package projetocruzeirao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -9,8 +10,30 @@ public class Resultado {
     private int golsMandante;
     private List<Usuario> usuarios;
     private Partida partida;
+    private String penalidade_vizitante;
+    private String penalidade_mandante;
+    
+    public Resultado(){
+     usuarios =new ArrayList<Usuario>();
+    }
 
-    public int getGolsVisitantes() {
+    public String getPenalidade_vizitante() {
+  return penalidade_vizitante;
+ }
+
+ public void setPenalidade_vizitante(String penalidade_vizitante) {
+  this.penalidade_vizitante = penalidade_vizitante;
+ }
+
+ public String getPenalidade_mandante() {
+  return penalidade_mandante;
+ }
+
+ public void setPenalidade_mandante(String penalidade_mandante) {
+  this.penalidade_mandante = penalidade_mandante;
+ }
+
+ public int getGolsVisitantes() {
         return golsVisitantes;
     }
 

@@ -1,15 +1,35 @@
 package projetocruzeirao;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class Times {
+public class Time {
     
     private String nome;
     private Usuario diretor;
     private Partida partida;
     private Inscricao inscricao;
-    private Membros membrosTime;
+    private List<Usuario> listUsuarios;
+    
+    public Time(){
+     listUsuarios = new ArrayList<Usuario>();
+    }
+    
+    
 
-    public String getNome() {
+    public List<Usuario> getListUsuarios() {
+  return listUsuarios;
+ }
+
+
+
+ public void addListUsuarios(Usuario listUsuarios) {
+  this.listUsuarios.add(listUsuarios);
+ }
+
+
+
+ public String getNome() {
         return nome;
     }
 
@@ -40,16 +60,7 @@ public class Times {
     public void setInscricao(Inscricao inscricao) {
         this.inscricao = inscricao;
     }
-
-    public Membros getMembrosTime() {
-        return membrosTime;
-    }
-
-    public void setMembrosTime(Membros membrosTime) {
-        this.membrosTime = membrosTime;
-    }
-    
-    
+  
     
     
 }

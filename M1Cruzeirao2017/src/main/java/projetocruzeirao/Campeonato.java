@@ -1,15 +1,30 @@
 package projetocruzeirao;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Campeonato {
 
     private int ano;
     private double duracao;
-    private double peins;
+    private boolean periodo_inscr;
     private double taxa;
-    private int cmin, jmin, cmax, jmax;
+    private int qtd_categoria_min, qtd_jogador_min, qtd_jogador_max;
+    private List<Categoria> categorias = new ArrayList<Categoria>();
+    
+    public Campeonato(){
+     categorias = new ArrayList<Categoria>();
+    }
 
-    public int getAno() {
+    public List<Categoria> getCategorias() {
+  return categorias;
+ }
+
+ public void setCategorias(Categoria categoria) {
+  this.categorias.add(categoria);
+ }
+
+ public int getAno() {
         return ano;
     }
 
@@ -25,14 +40,6 @@ public class Campeonato {
         this.duracao = duracao;
     }
 
-    public double getPeins() {
-        return peins;
-    }
-
-    public void setPeins(double peins) {
-        this.peins = peins;
-    }
-
     public double getTaxa() {
         return taxa;
     }
@@ -41,36 +48,37 @@ public class Campeonato {
         this.taxa = taxa;
     }
 
-    public int getCmin() {
-        return cmin;
-    }
+ public boolean isPeriodo_inscr() {
+  return periodo_inscr;
+ }
 
-    public void setCmin(int cmin) {
-        this.cmin = cmin;
-    }
+ public void setPeriodo_inscr(boolean periodo_inscr) {
+  this.periodo_inscr = periodo_inscr;
+ }
 
-    public int getJmin() {
-        return jmin;
-    }
+ public int getQtd_categoria_min() {
+  return qtd_categoria_min;
+ }
 
-    public void setJmin(int jmin) {
-        this.jmin = jmin;
-    }
+ public void setQtd_categoria_min(int qtd_categoria_min) {
+  this.qtd_categoria_min = qtd_categoria_min;
+ }
 
-    public int getCmax() {
-        return cmax;
-    }
+ public int getQtd_jogador_min() {
+  return qtd_jogador_min;
+ }
 
-    public void setCmax(int cmax) {
-        this.cmax = cmax;
-    }
+ public void setQtd_jogador_min(int qtd_jogador_min) {
+  this.qtd_jogador_min = qtd_jogador_min;
+ }
 
-    public int getJmax() {
-        return jmax;
-    }
+ public int getQtd_jogador_max() {
+  return qtd_jogador_max;
+ }
 
-    public void setJmax(int jmax) {
-        this.jmax = jmax;
-    }
+ public void setQtd_jogador_max(int qtd_jogador_max) {
+  this.qtd_jogador_max = qtd_jogador_max;
+ }
+
     
 }

@@ -1,14 +1,38 @@
 package projetocruzeirao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Categoria {
     
     private int idademinima;
     private char sexo;
     private boolean novosJogadores;
     private boolean novosTimes;
+    private List<Inscricao>inscricoes;
+    private Campeonato campeonato;
     
+    public Categoria(){
+     inscricoes = new ArrayList<Inscricao>();
+    }
+    
+    public List<Inscricao> getInscricoes() {
+  return inscricoes;
+ }
 
-    public int getIdademinima() {
+ public void AddInscricoes(Inscricao inscricao) {
+  this.inscricoes.add(inscricao);
+ }
+
+ public Campeonato getCampeonato() {
+  return campeonato;
+ }
+
+ public void setCampeonato(Campeonato campeonato) {
+  this.campeonato = campeonato;
+ }
+
+ public int getIdademinima() {
         return idademinima;
     }
 
