@@ -1,0 +1,110 @@
+<ui:composition template="templateMenu.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.membros.title']}" />
+	</ui:define>
+
+	<ui:define name="principal">
+		<div class="principal" align="center">
+			<h:form>
+				<p:panel id="panel" header="Search Form" style="margin-bottom:10px;">
+					<p:messages id="messages" />
+
+					<p:panelGrid columns="2">
+						<h:outputText value="Bruno" />
+						<h:selectOneMenu id="txt1" value="#{searchView.text1}" required="true" label="Text 1">
+							<f:selectItem itemLabel="#{msg['pages.membros.position']}" itemValue="" noSelectionOption="true" />
+							<f:selectItem itemLabel="#{msg['pages.membros.player']}" itemValue="1" />
+							<f:selectItem itemLabel="#{msg['pages.membros.coach']}" itemValue="2" />
+							<f:selectItem itemLabel="#{msg['pages.membros.goalkeeper']}" itemValue="3" />
+						</h:selectOneMenu>
+                        
+                        <h:outputText value="Eduardo" />
+						<h:selectOneMenu id="txt2" value="#{searchView.text2}" required="true" label="Text 2">
+							<f:selectItem itemLabel="#{msg['pages.membros.position']}" itemValue="" noSelectionOption="true" />
+							<f:selectItem itemLabel="#{msg['pages.membros.player']}" itemValue="1" />
+							<f:selectItem itemLabel="#{msg['pages.membros.coach']}" itemValue="2" />
+							<f:selectItem itemLabel="#{msg['pages.membros.goalkeeper']}" itemValue="3" />
+						</h:selectOneMenu>
+                        
+                        <h:outputText value="Fernando" />
+						<h:selectOneMenu id="txt3" value="#{searchView.text3}" required="true" label="Text 3">
+							<f:selectItem itemLabel="#{msg['pages.membros.position']}" itemValue="" noSelectionOption="true" />
+							<f:selectItem itemLabel="#{msg['pages.membros.player']}" itemValue="1" />
+							<f:selectItem itemLabel="#{msg['pages.membros.coach']}" itemValue="2" />
+							<f:selectItem itemLabel="#{msg['pages.membros.goalkeeper']}" itemValue="3" />
+						</h:selectOneMenu>
+                        
+                        <h:outputText value="Gabriel" />
+						<h:selectOneMenu id="txt4" value="#{searchView.text4}" required="true" label="Text 4">
+							<f:selectItem itemLabel="#{msg['pages.membros.position']}" itemValue="" noSelectionOption="true" />
+							<f:selectItem itemLabel="#{msg['pages.membros.player']}" itemValue="1" />
+							<f:selectItem itemLabel="#{msg['pages.membros.coach']}" itemValue="2" />
+							<f:selectItem itemLabel="#{msg['pages.membros.goalkeeper']}" itemValue="3" />
+						</h:selectOneMenu>
+                        
+                        <h:outputText value="Glauco" />
+						<h:selectOneMenu id="txt5" value="#{searchView.text5}" required="true" label="Text 5">
+							<f:selectItem itemLabel="#{msg['pages.membros.position']}" itemValue="" noSelectionOption="true" />
+							<f:selectItem itemLabel="#{msg['pages.membros.player']}" itemValue="1" />
+							<f:selectItem itemLabel="#{msg['pages.membros.coach']}" itemValue="2" />
+							<f:selectItem itemLabel="#{msg['pages.membros.goalkeeper']}" itemValue="3" />
+						</h:selectOneMenu>
+                        
+                        <h:outputText value="Ronaldo" />
+						<h:selectOneMenu id="txt6" value="#{searchView.text6}" required="true" label="Text 6">
+							<f:selectItem itemLabel="#{msg['pages.membros.position']}" itemValue="" noSelectionOption="true" />
+							<f:selectItem itemLabel="#{msg['pages.membros.player']}" itemValue="1" />
+							<f:selectItem itemLabel="#{msg['pages.membros.coach']}" itemValue="2" />
+							<f:selectItem itemLabel="#{msg['pages.membros.goalkeeper']}" itemValue="3" />
+						</h:selectOneMenu>
+                        
+                        <h:outputText value="Java" />
+						<h:selectOneMenu id="txt7" value="#{searchView.text7}" required="true" label="Text 7">
+							<f:selectItem itemLabel="#{msg['pages.membros.position']}" itemValue="" noSelectionOption="true" />
+							<f:selectItem itemLabel="#{msg['pages.membros.player']}" itemValue="1" />
+							<f:selectItem itemLabel="#{msg['pages.membros.coach']}" itemValue="2" />
+							<f:selectItem itemLabel="#{msg['pages.membros.goalkeeper']}" itemValue="3" />
+						</h:selectOneMenu>
+                        
+                        <h:outputText value="Dell" />
+						<h:selectOneMenu id="txt8" value="#{searchView.text8}" required="true" label="Text 8">
+							<f:selectItem itemLabel="#{msg['pages.membros.position']}" itemValue="" noSelectionOption="true" />
+							<f:selectItem itemLabel="#{msg['pages.membros.player']}" itemValue="1" />
+							<f:selectItem itemLabel="#{msg['pages.membros.coach']}" itemValue="2" />
+							<f:selectItem itemLabel="#{msg['pages.membros.goalkeeper']}" itemValue="3" />
+						</h:selectOneMenu>
+                        
+                        <h:outputText value="AlienWare" />
+						<h:selectOneMenu id="txt9" value="#{searchView.text9}" required="true" label="Text 9">
+							<f:selectItem itemLabel="#{msg['pages.membros.position']}" itemValue="" noSelectionOption="true" />
+							<f:selectItem itemLabel="#{msg['pages.membros.player']}" itemValue="1" />
+							<f:selectItem itemLabel="#{msg['pages.membros.coach']}" itemValue="2" />
+							<f:selectItem itemLabel="#{msg['pages.membros.goalkeeper']}" itemValue="3" />
+						</h:selectOneMenu>
+                        
+                        <h:outputText value="Java" />
+						<h:selectOneMenu id="txt10" value="#{searchView.text10}" required="true" label="Text 10">
+							<f:selectItem itemLabel="#{msg['pages.membros.position']}" itemValue="" noSelectionOption="true" />
+							<f:selectItem itemLabel="#{msg['pages.membros.player']}" itemValue="1" />
+							<f:selectItem itemLabel="#{msg['pages.membros.coach']}" itemValue="2" />
+							<f:selectItem itemLabel="#{msg['pages.membros.goalkeeper']}" itemValue="3" />
+						</h:selectOneMenu>
+                       
+					</p:panelGrid>
+				
+				</p:panel>
+
+				<h:panelGrid columns="2">
+					<p:commandButton value="#{msg['pages.cadastroCampeonato.btnsave']}" />
+				</h:panelGrid>
+			</h:form>
+		</div>
+	</ui:define>
+
+</ui:composition>

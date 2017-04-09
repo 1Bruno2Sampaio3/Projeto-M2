@@ -1,0 +1,39 @@
+<ui:composition template="templateMenu.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets">
+
+<ui:define name="title">
+		<h:outputText value="#{msg['pages.cadastroPreparador.title']}" />
+	</ui:define>
+	
+	<ui:define name="principal">
+		<div class="principal" align="center">
+		<p:outputLabel value="#{msg['pages.cadastroPreparador.menu']}" /> 
+	  <h:form id="formAluno">
+			<p:panelGrid columns="2">
+				<p:outputLabel value="#{msg['pages.cadastroPreparador.name']}" />
+				<p:inputText value="" />
+				<p:outputLabel value="#{msg['pages.cadastroPreparador.rg']}" />
+				<p:inputText value="" />
+				<p:outputLabel value="#{msg['pages.cadastroPreparador.cpf']}" />
+				<p:inputText value="" />
+				<p:outputLabel value="#{msg['pages.cadastroPreparador.email']}"  />
+				<p:inputText value="" />
+				<p:outputLabel value="#{msg['pages.cadastroPreparador.date']}" />
+				<p:inputText value="" />
+				<p:outputLabel value="#{msg['pages.cadastroPreparador.cref']}" />
+				<p:inputText value="" />
+				<p:outputLabel value="#{msg['pages.cadastroPreparador.password']} " />
+        		<p:password id="nonFeedback" value="#{passwordView.password1}" />
+				<p:outputLabel value="#{msg['pages.cadastroPreparador.confirm']} " />
+        		<p:password value="" />
+			</p:panelGrid>
+			<p:commandButton value="#{msg['pages.cadastroPreparador.btnsave']}" />
+		</h:form>
+</div>
+	</ui:define>
+</ui:composition>
