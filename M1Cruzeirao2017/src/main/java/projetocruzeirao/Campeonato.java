@@ -1,84 +1,98 @@
 package projetocruzeirao;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class Campeonato {
+	
+	private String nome;
+	private List<Local> locais;
+	private List<Juiz> juizes;
+	private List<Categoria> categorias;
+	private Calendar dataInicioInscricao;
+	private Calendar dataFimInscricao;
+	private Calendar dataInicioCampeonato;
+	private Calendar dataFimCampeonato;
+	private double valorTaxa;
+	
+	public Campeonato(){
+		locais = new ArrayList<Local>();
+		juizes = new ArrayList<Juiz>();
+		categorias = new ArrayList<Categoria>();
+	}
 
-    private int ano;
-    private double duracao;
-    private boolean periodo_inscr;
-    private double taxa;
-    private int qtd_categoria_min, qtd_jogador_min, qtd_jogador_max;
-    private List<Categoria> categorias = new ArrayList<Categoria>();
-    
-    public Campeonato(){
-     categorias = new ArrayList<Categoria>();
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public List<Categoria> getCategorias() {
-  return categorias;
- }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
- public void setCategorias(Categoria categoria) {
-  this.categorias.add(categoria);
- }
+	public Calendar getDataInicioInscricao() {
+		return dataInicioInscricao;
+	}
 
- public int getAno() {
-        return ano;
-    }
+	public void setDataInicioInscricao(Calendar dataInicioInscricao) {
+		this.dataInicioInscricao = dataInicioInscricao;
+	}
 
-    public void setAno(int ano) {
-        this.ano = ano;
-    }
+	public Calendar getDataFimInscricao() {
+		return dataFimInscricao;
+	}
 
-    public double getDuracao() {
-        return duracao;
-    }
+	public void setDataFimInscricao(Calendar dataFimInscricao) {
+		this.dataFimInscricao = dataFimInscricao;
+	}
 
-    public void setDuracao(double duracao) {
-        this.duracao = duracao;
-    }
+	public Calendar getDataInicioCampeonato() {
+		return dataInicioCampeonato;
+	}
 
-    public double getTaxa() {
-        return taxa;
-    }
+	public void setDataInicioCampeonato(Calendar dataInicioCampeonato) {
+		this.dataInicioCampeonato = dataInicioCampeonato;
+	}
 
-    public void setTaxa(double taxa) {
-        this.taxa = taxa;
-    }
+	public Calendar getDataFimCampeonato() {
+		return dataFimCampeonato;
+	}
 
- public boolean isPeriodo_inscr() {
-  return periodo_inscr;
- }
+	public void setDataFimCampeonato(Calendar dataFimCampeonato) {
+		this.dataFimCampeonato = dataFimCampeonato;
+	}
 
- public void setPeriodo_inscr(boolean periodo_inscr) {
-  this.periodo_inscr = periodo_inscr;
- }
+	public double getValorTaxa() {
+		return valorTaxa;
+	}
 
- public int getQtd_categoria_min() {
-  return qtd_categoria_min;
- }
+	public void setValorTaxa(double valorTaxa) {
+		this.valorTaxa = valorTaxa;
+	}
 
- public void setQtd_categoria_min(int qtd_categoria_min) {
-  this.qtd_categoria_min = qtd_categoria_min;
- }
+	public List<Local> getLocais() {
+		return locais;
+	}
+	
+	public void addLocal(Local l)
+	{
+		locais.add(l);
+	}
 
- public int getQtd_jogador_min() {
-  return qtd_jogador_min;
- }
+	public List<Juiz> getJuizes() {
+		return juizes;
+	}
+	
+	public void addJuiz(Juiz j)
+	{
+		juizes.add(j);
+	}
 
- public void setQtd_jogador_min(int qtd_jogador_min) {
-  this.qtd_jogador_min = qtd_jogador_min;
- }
-
- public int getQtd_jogador_max() {
-  return qtd_jogador_max;
- }
-
- public void setQtd_jogador_max(int qtd_jogador_max) {
-  this.qtd_jogador_max = qtd_jogador_max;
- }
-
-    
+	public List<Categoria> getCategorias() {
+		return categorias;
+	}
+	
+	public void addCategoria(Categoria c){
+		categorias.add(c);
+	}
 }

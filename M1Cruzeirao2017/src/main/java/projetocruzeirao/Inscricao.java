@@ -5,55 +5,73 @@ import java.util.List;
 
 public class Inscricao {
     
-    private boolean pago;
-    private boolean informacoesvalidas;
+    private long numero;
+    private boolean pagamento;
+    private boolean validada;
+    private List<Inscrito> inscritos; 
     private Categoria categoria;
-    private List<Time> times;
-    private Membro membros_confir;
+    private List<Partida> partidas;
+    private Equipe equipe;
     
     public Inscricao(){
-     times = new ArrayList<Time>();
-    }
-    public Membro getMembros_confir() {
-  return membros_confir;
- }
-
- public void setMembros_confir(Membro membros_confir) {
-  this.membros_confir = membros_confir;
- }
-
- public Categoria getCategoria() {
-        return categoria;
+    	inscritos = new ArrayList<Inscrito>();
+    	partidas = new ArrayList<Partida>();
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
+	public long getNumero() {
+		return numero;
+	}
 
-    public List<Time> getTimes() {
-        return times;
-    }
+	public void setNumero(long numero) {
+		this.numero = numero;
+	}
 
-    public void AddTimes(Time time) {
-        this.times.add(time);
-    }
+	public boolean isPagamento() {
+		return pagamento;
+	}
 
-    public boolean isPago() {
-        return pago;
-    }
+	public void setPagamento(boolean pagamento) {
+		this.pagamento = pagamento;
+	}
 
-    public void setPago(boolean pago) {
-        this.pago = pago;
-    }
+	public boolean isValidada() {
+		return validada;
+	}
 
-    public boolean isInformacoesvalidas() {
-        return informacoesvalidas;
-    }
+	public void setValidada(boolean validada) {
+		this.validada = validada;
+	}
 
-    public void setInformacoesvalidas(boolean informacoesvalidas) {
-        this.informacoesvalidas = informacoesvalidas;
-    }
-   
-    
+	public List<Inscrito> getIncritos() {
+		return inscritos;
+	}
+
+	public void addInscrito(Inscrito i) {
+		inscritos.add(i);
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	public List<Partida> getPartidas() {
+		return partidas;
+	}
+
+	public void addPartida(Partida p) {
+		partidas.add(p);
+	}
+
+	public Equipe getEquipe() {
+		return equipe;
+	}
+
+	public void setEquipe(Equipe equipe) {
+		this.equipe = equipe;
+	}
     
 }
